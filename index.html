@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Multiplication</title>
+  </head>
+  <h1>Multiplication Game</h1>
+  <body>
+    <section id='mainLvl'>
+    <p id='infoTxt'>Practice multiplication against the &#9200; <br>
+      Answer using the 'enter' key or the button. Good luck!</p>
+
+
+    <p id="selectdiff">Select Difficulty to Start</p>
+    <input id="1" type="radio" onclick="setDiff()"/> <span id=ez>Easy</span><br>
+    <input id="2" type="radio" onclick="setDiff()"/> <span id=md>Medium</span><br>
+    <input id="3" type="radio" onclick="setDiff()"/> <span id=hd>Hard</span><br>
+
+    <p id="first"></p>
+    <span id='feedbackC' style="display:none">Correct!</span>
+    <span id='feedbackW' style="display:none">Wrong</span>
+    <br>
+    <br>
+
+    <input hidden type="number" id="z">
+    <br>
+
+    <button id="button" onclick="Answ()">Answer</button>
+
+    <table id="scoretext" style="width:38%"/></table>
+
+    <br>
+
+    <progress value="0" max="10" id="progressBar"></progress>
+    <!--
+    <div class="progressBar2"></div>
+
+    -->
+
+    </section>
+
+    <section id='gameOverLvl'>
+    <p>Game Over!<br> Here is what you need to practice</p>
+    <p id="questDisp"></p>
+    <br>
+    <button type="button" onClick="retry()" value="Retry">Retry</button>
+    <button type="button" onclick="practice()" value="Practice">Practice</button>
+    </section>
+
+    <section id='pracSec'>
+    <span id='prac'></span>
+    <input type="number" id='p'>
+    <button type="button" id="G">Answer</button>
+    <p id='pracCW' style="display:none">Correct!</p>
+    <br>
+    <button type="button" id='lastRT' style="display:none" onclick="retry()">Retry</button>
+
+
+    </section>
+
+  </body>
+  <script src="main.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>

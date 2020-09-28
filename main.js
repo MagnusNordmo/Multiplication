@@ -147,15 +147,15 @@ function timerFunc(){
       clearInterval(downloadTimer);
     }
     document.getElementById("progressBar").value = 10 - timeleft;
-    if (items <= 10) {
-        timeleft -= 0.005
-    } else if (items > 10) {
-      timeleft -= 0.01
+    if (items <= 20) {
+        timeleft -= 0.001
     } else if (items > 20) {
-      timeleft -= 0.05
-    } else if (items > 30) {
-      timeleft -= 0.1
+      timeleft -= 0.005
     } else if (items > 40) {
+      timeleft -= 0.01
+    } else if (items > 70) {
+      timeleft -= 0.1
+    } else if (items > 120) {
       timeleft -= 0.15
     } else {
       timeleft -= 0.20
@@ -173,6 +173,7 @@ function gameOver(){
   mistakes = mistakes.replace(/What is/g,'');
   mistakes = mistakes.replace(/\?/g,'');
   document.getElementById("questDisp").innerHTML = mistakes;
+  document.getElementById("scoretext").innerHTML = 'Your Final Score: ' + totalscore;
 }
 
 // Global game Over
@@ -258,3 +259,4 @@ function endQuiz() {
 
 
 showNextQuestion();
+

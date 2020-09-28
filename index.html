@@ -25,7 +25,7 @@
     <br>
     <br>
 
-    <input hidden type="number" id="z">
+    <input hidden type="tel" id="z">
     <br>
 
     <button id="button" onclick="Answ()">Answer</button>
@@ -43,7 +43,9 @@
     </section>
 
     <section id='gameOverLvl'>
-    <p>Game Over!<br> Here is what you need to practice</p>
+    <p>Game Over!<br>
+      <table id="scoretext" style="width:38%"/></table> <br>
+      Here is what you need to practice</p>
     <p id="questDisp"></p>
     <br>
     <button type="button" onClick="retry()" value="Retry">Retry</button>
@@ -65,3 +67,4 @@
   <script src="main.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>
+

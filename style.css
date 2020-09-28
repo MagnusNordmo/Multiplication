@@ -5,6 +5,7 @@
 body {
   background-color:#E7F1FE;
   font-family: 'Noto Sans SC', sans-serif;
+  font-size: 30px;
 }
 
 
@@ -89,3 +90,4 @@ button:hover, input[type="button"] {
   background-color: #069;
 
 }
+
